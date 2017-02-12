@@ -2,17 +2,18 @@
 }
 
 .floatleft {
-  float:left;
-  width: 20%;
+  display:table-cell;
+  width: 240px;
   background-color: #283845 ;
   height: 100vh;
 }
 
 .floatright {
-  float: right;
+  display:table-cell;
+  z-index: 4;
   background-color: gold;
   height: 100vh;
-  width: 80%;
+  width: 100%;
 }
 .logo{
   color: white;

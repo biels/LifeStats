@@ -1,18 +1,15 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import styles from './HomePage.css';
+import styles from './PageTemplate.css';
 
 
-export default class HomePage extends Component {
-  props: {
-    children: HTMLElement
-  };
+export default class PageTemplate extends Component {
   render() {
     return (
       <div>
         <div className={styles.container}>
-          <h1>Home Page</h1>
+          Hi{this.props.children}
         </div>
       </div>
     );

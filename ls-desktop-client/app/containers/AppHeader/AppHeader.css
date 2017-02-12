@@ -1,0 +1,10 @@
+.container{
+  background-color: #f3f3f5;
+  height: 55px;
+  line-height: 55px;
+  vertical-align: middle;
+  padding-left: 16px;
+  display: block;
+  font-size: 28px;
+  font-family: Arial;
+}

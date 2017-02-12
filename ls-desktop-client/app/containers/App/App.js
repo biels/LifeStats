@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import NavBar from '../../components/NavBar/NavBar'
 import NavBarItem from '../../components/NavBarItem/NavBarItem'
+import AppHeader from '../AppHeader/AppHeader'
+import PageTemplate from '../../components/PageTemplate/PageTemplate'
 import styles from './App.css'
 
 export default class App extends Component {
@@ -24,7 +26,10 @@ export default class App extends Component {
           </NavBar>
         </div>
         <div className={styles.floatright}>
-          {this.props.children}
+          <AppHeader/>
+          <PageTemplate>
+            {this.props.children}
+          </PageTemplate>
         </div>
       </div>
     );
