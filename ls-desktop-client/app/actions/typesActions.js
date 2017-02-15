@@ -1,4 +1,4 @@
-import typesActions from '../api/catApi'
+import typesActions from '../api/api'
 
 import LsApi from '../api/api'
 
