@@ -2,19 +2,13 @@ import typesActions from '../api/api'
 
 import LsApi from '../api/api'
 
-export const LOAD_TYPES_SUCCESS = 'LOAD_TYPES_SUCCESS'
-export const LOAD_TYPES_ERROR = 'LOAD_TYPES_ERROR'
+export const LOAD_TYPES = 'LOAD_TYPES'
+export const LOAD_TYPES_FULFILLED = 'LOAD_TYPES_FULFILLED'
+export const LOAD_TYPES_REJECTED = 'LOAD_TYPES_REJECTED'
 
 export function loadTypes() {
-  return function (dispatch) { //Called by redux-thunk
-    console.log("loadTypes dispatched")
-    return LsApi.getAllTypes().then(types => dispatch(loadTypesSuccess(types))).catch(e => dispatch(loadTypesError(e)));
+  return {
+    type: LOAD_TYPES,
+    payload: LsApi.getAllTypes()
   }
-
-}
-export function loadTypesSuccess(types){
-  return {type: 'LOAD_TYPES_SUCCESS', payload: types}
-}
-export function loadTypesError(error){
-  return {type: 'LOAD_TYPES_ERROR', payload: error}
 }

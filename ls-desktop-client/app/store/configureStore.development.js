@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import promiseMiddleware from 'redux-promise';
+import promiseMiddleware from 'redux-promise-middleware';
 import { hashHistory } from 'react-router';
 import { routerMiddleware, push } from 'react-router-redux';
 import createLogger from 'redux-logger';
@@ -27,7 +27,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
   compose;
 /* eslint-enable no-underscore-dangle */
 const enhancer = composeEnhancers(
-  applyMiddleware(thunk, promiseMiddleware, router, logger)
+  applyMiddleware(thunk, promiseMiddleware(), router, logger)
 );
 
 export default function configureStore(initialState?) {
