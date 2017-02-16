@@ -7,6 +7,7 @@ export const LOAD_TYPES_ERROR = 'LOAD_TYPES_ERROR'
 
 export function loadTypes() {
   return function (dispatch) { //Called by redux-thunk
+    console.log("loadTypes dispatched")
     return LsApi.getAllTypes().then(types => dispatch(loadTypesSuccess(types))).catch(e => dispatch(loadTypesError(e)));
   }
 

@@ -15,7 +15,7 @@ export default class TrackPage extends Component {
     //this.props.onTypeChanged();
   }
   render() {
-    let buttonList = this.props.timeTypes.map(timeType => <Button onClick={this.handleButtonClick}>{timeType.name}</Button>)
+    let buttonList = this.props.timeTypes.map(timeType => <Button key={timeType.id} onClick={this.handleButtonClick}>{timeType.name}</Button>)
     return (
       <div>
         Select type of time active:
