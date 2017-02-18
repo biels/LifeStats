@@ -13,8 +13,8 @@ class LsApi{
       return e;
     });
   }
-  static getAllTypes(){
-    return client({method: 'GET', path: apiUrl + '/timeTypes'})
+  static getAllTypes(username){
+    return client({method: 'GET', path: apiUrl + '/timeTypes/search/findByUser_Username?username=' + username})
   }
 }
 export default LsApi;

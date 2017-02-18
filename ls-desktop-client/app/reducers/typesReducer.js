@@ -1,6 +1,8 @@
 import * as actions from '../actions/typesActions'
 
-export default function typesReducer(state = [], action = {}) {
+const initialState = [];
+
+export default function typesReducer(state = initialState, action = {}) {
   switch (action.type){
     case actions.LOAD_TYPES_FULFILLED:
       let types = [{id:0, name: "Reducer1"}, {id: 1, name: "Reducer2"}];
