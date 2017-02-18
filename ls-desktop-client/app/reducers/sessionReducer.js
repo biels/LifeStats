@@ -19,8 +19,13 @@ export default function sessionReducer(state = initialState, action) {
       newState.user.username = action.payload.username;
       newState.user.password = action.payload.password;
       return newState;
+
     case actions.REQUEST_LOGIN + status.PENDING:
       return Object.assign({}, state, {loginInProgress: true})
+
+    case actions.REQUEST_LOGIN + status.REJECTED:
+      return Object.assign({}, state, {loginInProgress: false})
+      return state;
 
     case actions.REQUEST_LOGIN + status.FULFILLED:
       const response = action.payload.entity;
