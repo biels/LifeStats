@@ -11,5 +11,5 @@ import java.util.List;
  * Created by Biel on 15/2/2017.
  */
 public interface TimeTypeRepository extends CrudRepository<TimeType, Long> {
-    List<TimeType> findByUser_Name(String username);
+    List<TimeType> findByUser_Username(String username);
 }
