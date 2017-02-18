@@ -1,0 +1,26 @@
+.wrap {
+}
+
+.floatleft {
+  display:table-cell;
+  width: 240px;
+  background-color: #283845 ;
+  height: 100vh;
+}
+
+.floatright {
+  display:table-cell;
+  z-index: 4;
+  background-color: gold;
+  height: 100vh;
+  width: 100%;
+}
+.logo{
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  font-size: 42px;
+  height: 100px;
+  font-family: Consolas;
+}

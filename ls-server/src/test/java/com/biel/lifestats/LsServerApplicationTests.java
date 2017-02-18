@@ -13,4 +13,8 @@ public class LsServerApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void findByUsername(){
+
+	}
 }
