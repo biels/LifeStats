@@ -8,6 +8,13 @@ export function requestLogin(username, password){
     payload: LsApi.login(username, password)
   }
 }
+export function requestLoginAuto() {
+  return (dispatch, getState) => {
+    const user = getState().session.user;
+    console.log(user)
+    dispatch(requestLogin(user.username, user.password));
+  }
+}
 export function setLoginInfo(username, password) {
   return {
     type: SET_LOGIN_INFO,

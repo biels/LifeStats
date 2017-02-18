@@ -7,7 +7,7 @@ import * as loginActions from '../../actions/loginActions'
 
 class AppHeader extends Component {
   componentDidMount(){
-    this.props.handleLoginClick();
+    this.props.handleStartup();
   }
   render() {
     let loginText = 'Login';
@@ -33,7 +33,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleLoginClick: () => {
-      dispatch(loginActions.requestLogin("biel", "1234"))
+      dispatch(loginActions.requestLoginAuto())
+    },
+    handleStartup: () => {
+      dispatch(loginActions.setLoginInfo("biel", "1234"))
     }
   }
 }
