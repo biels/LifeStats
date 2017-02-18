@@ -3,6 +3,7 @@ package com.biel.lifestats.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by Biel on 15/2/2017.
@@ -15,11 +16,15 @@ public class TimeType {
 
     private String name;
 
+    @ManyToOne
+    private User user;
+
     public TimeType() {
     }
 
-    public TimeType(String name) {
+    public TimeType(String name, User user) {
         this.name = name;
+        this.user = user;
     }
 
     public Long getId() {
@@ -28,6 +33,14 @@ public class TimeType {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getName() {

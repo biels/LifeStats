@@ -1,9 +1,6 @@
 package com.biel.lifestats.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * Created by Biel on 30/1/2017.
@@ -14,6 +11,8 @@ public class Record {
     @GeneratedValue
     private Long id;
 
+    @ManyToOne
+    private TimeType timeType;
     @ManyToOne
     private Statistic statistic;
 
