@@ -14,10 +14,9 @@ export default class NavBarItem extends Component {
     const active = this.context.router.isActive(location);
     return (
       <Link to={location}>
-        <div className={styles.edgeContainer}>
-          <div className={styles.container}>
+        <div className={active ? styles.edgeContainerSelected : styles.edgeContainer}>
+          <div className={active ? styles.containerSelected : styles.container}>
             {this.props.children}
-            {active && " [X]"}
 
           </div>
         </div>

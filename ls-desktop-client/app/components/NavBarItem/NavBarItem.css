@@ -1,15 +1,17 @@
 .edgeContainer{
-  background-color: #16a98c;
+  background-color: dodgerblue;
   padding-left: 0px;
 }
 .edgeContainer:hover{
   padding-left: 4px;
 }
-.edgeContainer:hover{
 
+.edgeContainerSelected{
+  background-color: #16a98c;
+  padding-left: 4px;
 }
 .edgeContainerSelected:hover{
-
+  padding-left: 4px;
 }
 
 .container {
@@ -30,7 +32,18 @@
   color: white;
 }
 .containerSelected{
-
+  background-color: #2f4050;
+  padding-left: 4px;
+  color: lightsteelblue;
+  font-size: 22px;
+  font-family: "Arial Black";
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  text-underline: none;
+  background-color: #283845;
+  color: white;
 }
 .containerSelected:hover{
 
