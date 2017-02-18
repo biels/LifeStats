@@ -1,5 +1,3 @@
-import typesActions from '../api/api'
-
 import LsApi from '../api/api'
 
 export const LOAD_TYPES = 'LOAD_TYPES'

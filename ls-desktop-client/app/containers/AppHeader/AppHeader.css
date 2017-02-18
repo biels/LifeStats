@@ -7,4 +7,10 @@
   display: block;
   font-size: 28px;
   font-family: Arial;
+  padding: 8px;
+}
+.loginButton{
+  float: right;
+  line-height: 55px;
+  vertical-align: middle;
 }
