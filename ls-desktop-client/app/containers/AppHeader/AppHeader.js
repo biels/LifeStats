@@ -33,7 +33,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleLoginClick: () => {
-      dispatch(loginActions.requestLoginAuto())
+      //Predefined login
+      dispatch(loginActions.requestLogin("biel", "1234"))
     },
     handleStartup: () => {
       //Automatic login
