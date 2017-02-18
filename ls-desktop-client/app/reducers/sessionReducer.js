@@ -25,9 +25,7 @@ export default function sessionReducer(state = initialState, action) {
     case actions.REQUEST_LOGIN + status.FULFILLED:
       const response = action.payload.entity;
       const success = response.success;
-      var user = {
-        name: response.fullName
-      }
+      var user = Object.assign({}, state.user, {name: response.fullName})
       console.log("success: " + success + ", message: " + response.message + ", user: " + user.name)
       return Object.assign({}, state, {loggedIn: success, loginInProgress: false, apiMessage: response.message, user});
 
