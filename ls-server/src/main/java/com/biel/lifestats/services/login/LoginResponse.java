@@ -1,22 +1,24 @@
 package com.biel.lifestats.services.login;
 
+import com.biel.lifestats.model.User;
+
 /**
  * Created by Biel on 18/2/2017.
  */
 public class LoginResponse {
     boolean success;
     String message;
-    String fullName;
+    User user;
 
     public LoginResponse(boolean success, String message) {
         this.success = success;
         this.message = message;
     }
 
-    public LoginResponse(boolean success, String message, String fullName) {
+    public LoginResponse(boolean success, String message, User user) {
         this.success = success;
         this.message = message;
-        this.fullName = fullName;
+        this.user = user;
     }
 
     public boolean isSuccess() {
@@ -35,11 +37,11 @@ public class LoginResponse {
         this.message = message;
     }
 
-    public String getFullName() {
-        return fullName;
+    public User getUser() {
+        return user;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

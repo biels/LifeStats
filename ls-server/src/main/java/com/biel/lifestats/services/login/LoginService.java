@@ -24,6 +24,6 @@ public class LoginService {
         }
         if(!userOptional.get().getPassword().equalsIgnoreCase(loginRequest.password))
             return ResponseEntity.ok(new LoginResponse(false, "Wrong password"));
-        return ResponseEntity.ok(new LoginResponse(true, "OK", userOptional.get().getName()));
+        return ResponseEntity.ok(new LoginResponse(true, "OK", userOptional.get()));
     }
 }
