@@ -6,10 +6,17 @@ package com.biel.lifestats.services.login;
 public class LoginResponse {
     boolean success;
     String message;
+    String fullName;
 
     public LoginResponse(boolean success, String message) {
         this.success = success;
         this.message = message;
+    }
+
+    public LoginResponse(boolean success, String message, String fullName) {
+        this.success = success;
+        this.message = message;
+        this.fullName = fullName;
     }
 
     public boolean isSuccess() {
@@ -26,5 +33,13 @@ public class LoginResponse {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }
