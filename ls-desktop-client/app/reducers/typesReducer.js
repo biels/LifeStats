@@ -4,7 +4,7 @@ import * as actions from '../actions/typesActions'
 const initialState = {
   valid: true,
   fetching: false,
-  selectedIndex,
+  selectedIndex: -1,
   types: []
 };
 

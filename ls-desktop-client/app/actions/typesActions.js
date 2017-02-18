@@ -18,7 +18,7 @@ export function loadTypes() {
 
 export function typeSelected(typeIndex) {
   return {
-    type: LOAD_TYPES,
+    type: TYPE_SELECTED,
     payload: typeIndex
   }
 }
