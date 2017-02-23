@@ -1,6 +1,6 @@
 const client = require('./client/client')
 
-const apiUrl = 'http://localhost:5000';
+const apiUrl = 'http://localhost:5001';
 
 class LsApi{
   static login(username, password){
