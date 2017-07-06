@@ -22,7 +22,7 @@ public class Populator implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        User bielUser = userRepository.save(new User("Biel Simon","biel", "1234"));
+        User bielUser = userRepository.save(new User("Default User","default", "1234"));
         Stream.of("Study", "Sport", "Housework", "Commute")
                 .forEach(s -> timeTypeRepository.save(new TimeType(s, bielUser)));
     }

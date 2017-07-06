@@ -1,6 +1,8 @@
 package com.biel.lifestats.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,9 +19,11 @@ public class TimeType {
     @GeneratedValue
     private Long id;
 
+    @NaturalId
     private String name;
 
     @ManyToOne
+    @JsonIgnore
     private User user;
 
     public TimeType() {
