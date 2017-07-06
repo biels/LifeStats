@@ -38,7 +38,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleStartup: () => {
       //Automatic login
-      dispatch(loginActions.requestLogin("biel", "1234"))
+      //dispatch(loginActions.requestLogin("biel", "1234"))
     }
   }
 }
