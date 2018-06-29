@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "ls-desktop-client/app/package.json",
+        "ls-desktop-client/package.json"
+      ]
+    }
+  }
+}
